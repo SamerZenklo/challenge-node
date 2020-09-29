@@ -1,0 +1,13 @@
+<%- include("./components/header")   %>
+
+<h1><%= article.name %></h1>
+<p><%= article.message %></p>
+<a href=/delete/<%= article.id %>>Delete</a>
+
+<form method="POST" action=/update/<%= article.id %>>
+    <input name="name" value=<%= article.name %>>
+    <input name="message" value=<%= article.message %>>
+    <button type="submit">Submit</button>
+</form>
+
+<%- include("./components/footer")    %>

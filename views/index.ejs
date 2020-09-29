@@ -1,0 +1,19 @@
+<%- include("./components/header")   %>
+
+<form method="POST" action="/">
+    <input name="name" >
+    <input name="message">
+    <button type="submit">Submit</button>
+</form>
+
+
+<% if(data.length > 0){ %>
+    <% data.forEach(article => { %>
+        <h1><%= article.name %></h1>
+        <p><%= article.message %></p>
+        <a href=/one/<%= article.id %>>see more</a>
+    <% }) %>
+<% } else { %>
+    <h1>there are no data</h1>
+<% } %>
+<%- include("./components/footer")    %>
